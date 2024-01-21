@@ -1,0 +1,90 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            background: #A173CF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background: #9174B2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>アンケートフォーム</h2>
+        <form id="surveyForm">
+            <p>サービスに対する満足度を選択してください:</p>
+            <label>
+                <input type="radio" id="verySatisfied" name="satisfaction" value="verySatisfied">
+                非常に満足
+            </label>
+            <label>
+                <input type="radio" id="satisfied" name="satisfaction" value="satisfied">
+                満足
+            </label>
+            <label>
+                <input type="radio" id="neutral" name="satisfaction" value="neutral">
+                どちらでもない
+            </label>
+            <label>
+                <input type="radio" id="dissatisfied" name="satisfaction" value="dissatisfied">
+                不満
+            </label>
+            <label>
+                <input type="radio" id="veryDissatisfied" name="satisfaction" value="veryDissatisfied">
+                非常に不満
+            </label>
+            <input type="submit" value="送信" class="button">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('surveyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var satisfaction = document.querySelector('input[name="satisfaction"]:checked').value;
+            if (satisfaction === 'verySatisfied' || satisfaction === 'satisfied') {
+                window.location.href = 'https://bit.ly/4ajWh8U'; // 適切なURLに置き換えてください
+            } else {
+            　　　　　　　　window.location.href = 'https://forms.gle/xokVovV4iiVnE9oVA'; // 新しいURL
+            }
+        });
+    </script>
+</body>
+</html>
